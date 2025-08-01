@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postbuild": "netlify next",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,6 +17,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@netlify/next": "^1.4.9",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-awesome-reveal": "^4.3.1",
