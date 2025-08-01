@@ -37,7 +37,7 @@ export default function HomeComponent({
           <Slide direction="left" duration={2000} className="text-white">
             <div className="flex flex-col">
               <div className="flex flex-col gap-2">
-                <label className="text-1xl">Hello I'm</label>
+                <label className="text-1xl">{`Hello I'm`}</label>
                 <label className="text-2xl">{name}</label>
                 <p className="text-sm">{roleDescription}</p>
               </div>

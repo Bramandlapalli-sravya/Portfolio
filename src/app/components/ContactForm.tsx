@@ -39,7 +39,7 @@ export default function ContactForm() {
   return (
     <div className="bg-[#0c0b22] text-white p-8 rounded-lg shadow-lg">
       <h2 className="text-xl font-semibold mb-6">
-        Contact me, let's make magic together
+        {`Contact me, let's make magic together`}
       </h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
