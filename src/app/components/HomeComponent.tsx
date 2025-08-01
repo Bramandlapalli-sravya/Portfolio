@@ -8,12 +8,9 @@ import {
   faBarsProgress,
   faLaptopCode,
   faMobile,
-  faWebAwesome,
   faTools,
   faShareNodes,
   faBowlFood,
-  faMailReplyAll,
-  faMailBulk,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";

@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Fade, Slide } from 'react-awesome-reveal';
 
 type Props = {
     children: React.ReactNode;

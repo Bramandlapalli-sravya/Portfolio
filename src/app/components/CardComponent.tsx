@@ -1,11 +1,10 @@
 interface CardComponentProps {
     title: string;
     description: string;
-    imageUrl?: string;
     icon?: React.ReactNode;
 }
 
-export default function CardComponent({ title, description, imageUrl, icon }: CardComponentProps) {
+export default function CardComponent({ title, description, icon }: CardComponentProps) {
     return (
         <div className="bg-[#6c63ff] w-48 h-44 p-3 flex flex-col items-start justify-end group cursor-pointer transition-all duration-300 relative">
             <div className="mb-2">{icon}</div>
