@@ -6,33 +6,41 @@ export default function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.send(
-      'service_t7py00d',     // service id
-      'template_8tgtjq9',    // template id
-      form,
-      'xZZuv2mtQxpExWdrC'      // public key
-    ).then(() => {
-      alert('Message sent successfully!');
-      setForm({ name: '', email: '', message: '' });
-    }).catch((err) => {
-      console.error(err);
-      alert('Failed to send message.');
-    }).finally(() => {
-      setLoading(false);
-    });
+    emailjs
+      .send(
+        'service_t7py00d',
+        'template_8tgtjq9',
+        form,
+        'xZZuv2mtQxpExWdrC'
+      )
+      .then(() => {
+        alert('Message sent successfully!');
+        setForm({ name: '', email: '', message: '' });
+      })
+      .catch((err) => {
+        console.error(err);
+        alert('Failed to send message.');
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
     <div className="bg-[#0c0b22] text-white p-8 rounded-lg shadow-lg">
-      <h2 className="text-xl font-semibold mb-6">Contact me, let's make magic together</h2>
+      <h2 className="text-xl font-semibold mb-6">
+        Contact me, let's make magic together
+      </h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           name="name"
